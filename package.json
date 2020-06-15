@@ -1,0 +1,15 @@
+{
+  "name": "gh-pages-backend",
+  "version": "1.0.0",
+  "description": "Github Pages Site backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "functions-framework --target=election"
+  },
+  "author": "Oscar Sims",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.5.1",
+    "googleapis": "^49.0.0"
+  }
+}
