@@ -153,6 +153,7 @@ function processColumns(response) {
         for (let row of response.valueRanges[col].values) {
             rows.push(row[0]);
         }
+        rows.shift();
         
         columns[title] = rows;
     }
