@@ -14,7 +14,7 @@ exports.election = async (req, res) => {
                         return res.send(await getRows('Polls', 11));
 
                     case 'electorates':
-                        return res.send(await getTabular('Electorates', 8));
+                        return res.send(await getTabular('Electorates', 10));
 
                     case 'lists':
                         return res.send(await getColumns('Party Lists', 8));
