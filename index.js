@@ -18,10 +18,12 @@ exports.election = async (req, res) => {
 
                     case 'lists':
                         return res.send(await getColumns('Party Lists', 8));
+                    default:
+                        return res.sendStatus(404);
                 }
 
             case 'POST':
-                res.status(405).send({ error: 'That method is not allowed.' });
+                return res.status(405).send({ error: 'That method is not allowed.' });
 
             case 'OPTIONS':
                 res.set('Access-Control-Allow-Methods', 'GET');
@@ -30,8 +32,7 @@ exports.election = async (req, res) => {
                 return res.status(204).send('');
 
             default:
-                res.status(405).send({ error: 'That method is not allowed.' });
-                break;
+                return res.status(405).send({ error: 'That method is not allowed.' });
         }
     }
     catch (e) {
